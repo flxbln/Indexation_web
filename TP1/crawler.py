@@ -66,8 +66,7 @@ def crawl(start_url, max_pages=50, delay=1):
         visited.add(url)
 
         # --- Ajout des liens avec priorité ---
-        for link in data["links"]:
-            link_url = link["url"]
+        for link_url in data["links"]:
 
             if link_url in visited or link_url in to_visit:
                 continue

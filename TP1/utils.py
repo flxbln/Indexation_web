@@ -81,44 +81,66 @@ def parse_html(html_content, page_url):
     Parse le HTML d'une page pour extraire le titre, le premier paragraphe
     et les liens internes, en conservant la page source des liens.
     """
-    
+
     soup = BeautifulSoup(html_content, "html.parser")
 
     # --- Title ---
     title = soup.title.string.strip() if soup.title and soup.title.string else ""
 
-    # --- Description ---
     description = ""
+    product_features = {}
+    product_reviews = []
+
+    # --- Product page detection ---
     if "/product/" in page_url:
-        p = soup.find("p")
-        if p:
-            description = p.get_text(strip=True)
 
+        # --- Description ---
+        desc_div = soup.find("div", class_="description")
+        if desc_div:
+            p = desc_div.find("p")
+            if p:
+                description = p.get_text(strip=True)
 
-    # --- Liens internes + provenance ---
+        # --- Product features ---
+        features_ul = soup.find("ul", class_="product-features")
+        if features_ul:
+            for li in features_ul.find_all("li"):
+                key = li.find("strong")
+                if key:
+                    feature_name = key.get_text(strip=True).replace(":", "").lower()
+                    feature_value = li.get_text(strip=True).replace(key.get_text(), "").strip()
+                    product_features[feature_name] = feature_value
+
+        # --- Product reviews ---
+        reviews_div = soup.find("div", class_="reviews")
+        if reviews_div:
+            for review in reviews_div.find_all("div", class_="review"):
+                rating = review.find("span", class_="rating")
+                text = review.find("p")
+                date = review.find("span", class_="date")
+
+                product_reviews.append({
+                    "id": f"{page_url.split('/')[-1]}-{len(product_reviews)+1}",
+                    "rating": int(rating.get_text()) if rating else None,
+                    "text": text.get_text(strip=True) if text else "",
+                    "date": date.get_text(strip=True) if date else ""
+                })
+
+    # --- Links ---
     links = []
-    base_domain = urlparse(page_url).netloc
-
     for a in soup.find_all("a", href=True):
-        href = a["href"]
-        absolute_url = urljoin(page_url, href) # combine une base URL
-        parsed_href = urlparse(absolute_url)
-
-        # On ne garde que les liens internes
-        if parsed_href.netloc == base_domain:
-            links.append({
-                "url": absolute_url,
-                "from_page": page_url
-            })
+        links.append(urljoin(page_url, a["href"]))
 
     return {
         "url": page_url,
         "title": title,
         "description": description,
-        "product_features": {},
+        "product_features": product_features,
         "links": links,
-        "product_reviews": []
+        "product_reviews": product_reviews
     }
+
+
 
 #===============Système de priorité=========================
 
