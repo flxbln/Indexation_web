@@ -86,6 +86,8 @@ def parse_html(html_content, page_url):
 
     # --- Title ---
     title = soup.title.string.strip() if soup.title and soup.title.string else ""
+    # Il y a a chaque fois web-scraping.dev dans le titre 
+    #A enlever
 
     description = ""
     product_features = {}
@@ -95,12 +97,19 @@ def parse_html(html_content, page_url):
     if "/product/" in page_url:
 
         # --- Description ---
-        desc_div = soup.find("div", class_="description")
+        
+        """
+        desc_div = soup.find("div", class_="short-description")
         if desc_div:
             p = desc_div.find("p")
             if p:
                 description = p.get_text(strip=True)
-
+        """
+        p_tag = soup.find("p")
+        if p_tag:
+            description = p_tag.get_text(strip=True)
+        
+                
         # --- Product features ---
         features_ul = soup.find("ul", class_="product-features")
         if features_ul:
@@ -125,6 +134,8 @@ def parse_html(html_content, page_url):
                     "text": text.get_text(strip=True) if text else "",
                     "date": date.get_text(strip=True) if date else ""
                 })
+
+        #Toujours pas recuperer dans le fichier final
 
     # --- Links ---
     links = []

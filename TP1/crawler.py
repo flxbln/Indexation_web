@@ -7,11 +7,11 @@ from utils import fetch_url, parse_html, init_robot_parser, can_parse_page, is_p
 ### suit les liens internes et s’arrête après avoir visité un nombre maximal de pages.
 
 START_URL = "https://web-scraping.dev/products"
-MAX_PAGES = 50
+MAX_PAGES = 10
 DELAY = 1  # politesse : 1 seconde entre chaque requête
 
 
-def crawl(start_url, max_pages=50, delay=1):
+def crawl(start_url, max_pages=10, delay=1):
     """"
     Le crawler utilise une file d’attente d’URLs à visiter et applique une stratégie de priorité simple 
     permettant d’explorer en premier les pages produits, identifiées par la présence du token product dans l’URL, 
