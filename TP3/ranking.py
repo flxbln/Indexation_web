@@ -74,6 +74,71 @@ def score_document(
         position_bonus
     )
 
+def score_document(
+    doc_id,
+    query_tokens,
+    title_index,
+    description_index,
+    brand_index,
+    origin_index,
+    reviews_index
+):
+    score = 0.0
+    signals = {}
+
+    # --- Token frequency ---
+    title_hits = sum(
+        1 for t in query_tokens
+        if t in title_index and doc_id in title_index[t]
+    )
+
+    description_hits = sum(
+        1 for t in query_tokens
+        if t in description_index and doc_id in description_index[t]
+    )
+
+    # Weighted importance
+    score += 3 * title_hits
+    score += 1 * description_hits
+
+    signals["title_hits"] = title_hits
+    signals["description_hits"] = description_hits
+
+    # --- Brand match ---
+    brand_hits = sum(
+        1 for t in query_tokens
+        if t in brand_index and doc_id in brand_index[t]
+    )
+
+    score += 4 * brand_hits
+    signals["brand_match"] = brand_hits
+
+    # --- Origin match (important for TP3) ---
+    origin_hits = sum(
+        1 for t in query_tokens
+        if t in origin_index and doc_id in origin_index[t]
+    )
+
+    score += 5 * origin_hits
+    signals["origin_match"] = origin_hits
+
+    # --- Reviews signal ---
+    if doc_id in reviews_index:
+        avg_rating = reviews_index[doc_id]["avg_rating"]
+        review_count = reviews_index[doc_id]["count"]
+
+        score += avg_rating
+        score += 0.1 * review_count
+
+        signals["avg_rating"] = avg_rating
+        signals["review_count"] = review_count
+    else:
+        signals["avg_rating"] = 0
+        signals["review_count"] = 0
+
+    return score, signals
+
+
 # Ranking final
 def rank_documents(candidates, **kwargs):
     """
@@ -85,6 +150,40 @@ def rank_documents(candidates, **kwargs):
         scores[doc_id] = score_document(doc_id=doc_id, **kwargs)
 
     return sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+def rank_documents(
+    candidates,
+    query_tokens,
+    documents,
+    title_index,
+    description_index,
+    brand_index,
+    origin_index,
+    reviews_index
+):
+    ranked = []
+
+    for doc_id in candidates:
+        score, signals = score_document(
+            doc_id,
+            query_tokens,
+            title_index,
+            description_index,
+            brand_index,
+            origin_index,
+            reviews_index
+        )
+
+        ranked.append({
+            "title": documents[doc_id]["title"],
+            "url": documents[doc_id]["url"],
+            "description": documents[doc_id]["description"],
+            "score": round(score, 3),
+            "signals": signals
+        })
+
+    ranked.sort(key=lambda x: x["score"], reverse=True)
+    return ranked
 
 
 def format_results(results, total_docs, query):
