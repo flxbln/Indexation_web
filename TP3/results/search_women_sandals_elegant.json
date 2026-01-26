@@ -1,0 +1,70 @@
+{
+  "query": "women sandals elegant",
+  "metadata": {
+    "total_documents": 156,
+    "filtered_documents": 10,
+    "returned_results": 10
+  },
+  "results": [
+    {
+      "url": "https://web-scraping.dev/product/8",
+      "title": "Women's High Heel Sandals",
+      "description": "Step out in style with our women's high heel sandals. These sandals feature a strappy design that adds a touch of elegance to any outfit. Choose from black, red, nude, or silver to complement your wardrobe",
+      "score": 40.52
+    },
+    {
+      "url": "https://web-scraping.dev/product/20",
+      "title": "Women's High Heel Sandals",
+      "description": "The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit. These sandals feature a strappy design that adds a touch of elegance to any outfit. Choose from black, red, nude, or silver to complement your wardrobe",
+      "score": 39.32
+    },
+    {
+      "url": "https://web-scraping.dev/product/20?variant=blue-9",
+      "title": "Women's High Heel Sandals - Blue 9",
+      "description": "Step out in style with our women's high heel sandals. Choose from black, red, nude, or silver to complement your wardrobe. These sandals feature a strappy design that adds a touch of elegance to any outfit",
+      "score": 35.96
+    },
+    {
+      "url": "https://web-scraping.dev/product/8?variant=beige-7",
+      "title": "Women's High Heel Sandals - Beige 7",
+      "description": "Step out in style with our women's high heel sandals. Choose from black, red, nude, or silver to complement your wardrobe. The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit",
+      "score": 34.83
+    },
+    {
+      "url": "https://web-scraping.dev/product/8?variant=beige-6",
+      "title": "Women's High Heel Sandals - Beige 6",
+      "description": "Choose from black, red, nude, or silver to complement your wardrobe. The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit. Step out in style with our women's high heel sandals",
+      "score": 34.83
+    },
+    {
+      "url": "https://web-scraping.dev/product/20?variant=beige-8",
+      "title": "Women's High Heel Sandals - Beige 8",
+      "description": "Choose from black, red, nude, or silver to complement your wardrobe. The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit. Step out in style with our women's high heel sandals",
+      "score": 34.83
+    },
+    {
+      "url": "https://web-scraping.dev/product/20?variant=beige-6",
+      "title": "Women's High Heel Sandals - Beige 6",
+      "description": "The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit. Step out in style with our women's high heel sandals. Choose from black, red, nude, or silver to complement your wardrobe",
+      "score": 34.83
+    },
+    {
+      "url": "https://web-scraping.dev/product/20?variant=beige-7",
+      "title": "Women's High Heel Sandals - Beige 7",
+      "description": "These sandals feature a strappy design that adds a touch of elegance to any outfit. Choose from black, red, nude, or silver to complement your wardrobe. The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit",
+      "score": 34.75
+    },
+    {
+      "url": "https://web-scraping.dev/product/8?variant=beige-8",
+      "title": "Women's High Heel Sandals - Beige 8",
+      "description": "These sandals feature a strappy design that adds a touch of elegance to any outfit. Choose from black, red, nude, or silver to complement your wardrobe. The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit",
+      "score": 34.75
+    },
+    {
+      "url": "https://web-scraping.dev/product/8?variant=blue-9",
+      "title": "Women's High Heel Sandals - Blue 9",
+      "description": "These sandals feature a strappy design that adds a touch of elegance to any outfit. Choose from black, red, nude, or silver to complement your wardrobe. The comfortable footbed and sturdy heel make them perfect for a night out, while the buckle closure ensures a secure fit",
+      "score": 34.75
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "query": "energy potion usa",
+  "metadata": {
+    "total_documents": 156,
+    "filtered_documents": 39,
+    "returned_results": 20
+  },
+  "results": [
+    {
+      "url": "https://web-scraping.dev/product/4",
+      "title": "Red Energy Potion",
+      "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective",
+      "score": 45.12
+    },
+    {
+      "url": "https://web-scraping.dev/product/6",
+      "title": "Dragon Energy Potion",
+      "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions",
+      "score": 45.05
+    },
+    {
+      "url": "https://web-scraping.dev/product/28",
+      "title": "Red Energy Potion",
+      "description": "Are you ready to level up?. Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective",
+      "score": 44.66
+    },
+    {
+      "url": "https://web-scraping.dev/product/15",
+      "title": "Teal Energy Potion",
+      "description": "Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community. With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights",
+      "score": 44.58
+    },
+    {
+      "url": "https://web-scraping.dev/product/16",
+      "title": "Red Energy Potion",
+      "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Are you ready to level up?",
+      "score": 44.54
+    },
+    {
+      "url": "https://web-scraping.dev/product/17",
+      "title": "Blue Energy Potion",
+      "description": "Drink up and game on!. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers. Inspired by the classic video game potions, this energy drink provides a much-needed boost to keep you focused and energized",
+      "score": 44.48
+    },
+    {
+      "url": "https://web-scraping.dev/product/3",
+      "title": "Teal Energy Potion",
+      "description": "Every sip is an adventure - let the quest begin!. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+      "score": 44.44
+    },
+    {
+      "url": "https://web-scraping.dev/product/18",
+      "title": "Dragon Energy Potion",
+      "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Embrace the spirit of the dragon - play hard, play long",
+      "score": 44.39
+    },
+    {
+      "url": "https://web-scraping.dev/product/5",
+      "title": "Blue Energy Potion",
+      "description": "It's more than just an energy drink - it's an ode to the gaming culture, packaged in an aesthetically pleasing potion-like bottle that'll make you feel like you're in your favorite game world. Drink up and game on!. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers",
+      "score": 44.38
+    },
+    {
+      "url": "https://web-scraping.dev/product/27",
+      "title": "Teal Energy Potion",
+      "description": "Every sip is an adventure - let the quest begin!. With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights",
+      "score": 42.86
+    },
+    {
+      "url": "https://web-scraping.dev/product/4?variant=one",
+      "title": "Red Energy Potion - One",
+      "description": "Elevate your game with our 'red potion', an extraordinary energy drink that's as enticing as it is effective. This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game",
+      "score": 42.04
+    },
+    {
+      "url": "https://web-scraping.dev/product/18?variant=one",
+      "title": "Dragon Energy Potion - One",
+      "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions",
+      "score": 41.96
+    },
+    {
+      "url": "https://web-scraping.dev/product/15?variant=one",
+      "title": "Teal Energy Potion - One",
+      "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+      "score": 41.5
+    },
+    {
+      "url": "https://web-scraping.dev/product/27?variant=one",
+      "title": "Teal Energy Potion - One",
+      "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+      "score": 41.5
+    },
+    {
+      "url": "https://web-scraping.dev/product/16?variant=one",
+      "title": "Red Energy Potion - One",
+      "description": "Are you ready to level up?. This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game",
+      "score": 41.46
+    },
+    {
+      "url": "https://web-scraping.dev/product/28?variant=one",
+      "title": "Red Energy Potion - One",
+      "description": "This fiery red potion delivers an explosive berry flavor and an energy kick that keeps you at the top of your game. Are you ready to level up?",
+      "score": 41.46
+    },
+    {
+      "url": "https://web-scraping.dev/product/3?variant=one",
+      "title": "Teal Energy Potion - One",
+      "description": "Every sip is an adventure - let the quest begin!. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community",
+      "score": 41.35
+    },
+    {
+      "url": "https://web-scraping.dev/product/26",
+      "title": "Dark Red Energy Potion",
+      "description": "Unleash the power within with our 'dark red potion', an energy drink as intense as the games you play. Bring out the best in your gaming performance, and unlock your full potential",
+      "score": 41.3
+    },
+    {
+      "url": "https://web-scraping.dev/product/6?variant=one",
+      "title": "Dragon Energy Potion - One",
+      "description": "Embrace the spirit of the dragon - play hard, play long. Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges",
+      "score": 41.3
+    },
+    {
+      "url": "https://web-scraping.dev/product/17?variant=one",
+      "title": "Blue Energy Potion - One",
+      "description": "It's more than just an energy drink - it's an ode to the gaming culture, packaged in an aesthetically pleasing potion-like bottle that'll make you feel like you're in your favorite game world. Ignite your gaming sessions with our 'blue energy potion', a premium energy drink crafted for dedicated gamers. Drink up and game on!",
+      "score": 41.3
+    }
+  ]
+}
